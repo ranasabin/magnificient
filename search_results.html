@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Results</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9fafb;
+      padding: 2rem;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .result {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .result h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Search Study Programs</h1>
+  <input type="text" id="searchInput" placeholder="Type a keyword (e.g., engineering, medicine)" />
+
+  <div id="results">
+    <div class="result" data-keywords="study in usa">
+      <h3>USA</h3>
+      <p>Top programs in mechanical, electrical, and automation engineering.</p>
+    </div>
+    <div class="result" data-keywords="medicine health nursing">
+      <h3>Medicine & Healthcare</h3>
+      <p>Study nursing or medical sciences at world-class universities.</p>
+    </div>
+    <div class="result" data-keywords="business management finance">
+      <h3>Business and Management</h3>
+      <p>Explore programs in international business, marketing, and finance.</p>
+    </div>
+    <div class="result" data-keywords="environment sustainability ecology">
+      <h3>Environmental Studies</h3>
+      <p>Programs focused on sustainability, climate change, and renewable energy.</p>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const results = document.querySelectorAll('.result');
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+
+      results.forEach(result => {
+        const keywords = result.getAttribute('data-keywords');
+        if (keywords.includes(query)) {
+          result.style.display = 'block';
+        } else {
+          result.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

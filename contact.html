@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAGNIFICENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color:rgb(255, 255, 255);
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .navbar img {
+      height: 100px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+    }
+
+    .subtext {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .navbar .links a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      background:rgb(255, 255, 255);
+      padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .main-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      color: skyblue;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #fff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup {
+      background-color: rgba(255, 255, 255, 0);
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: popupFade 0.3s ease;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #0077ff;
+    }
+
+    .popup p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup .close-btn {
+      padding: 10px 20px;
+      background: #ff3b3b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+      background: #d62828;
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+    @keyframes popupFade {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <div class="navbar">
+    <a href="web.html"><img src="/Users/sabinrana/Downloads/download.jpeg" alt="Logo"></a>
+    <div>
+      <div class="brand">MAGNIFICENT STUDY ABROAD</div>
+     <div style="text-align: center ;"class="subtext">Magnificent Education and I.T Services</div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i></a>
+      <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i></a>
+      <a href="https://x.com/meit2008?lang=fa" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
+      <a href="https://www.tiktok.com/@meit2008" target="_blank"><i class="fab fa-tiktok fa-2x" style="color: #000000;"></i></a>
+      <a href="https://www.linkedin.com/company/magnificentconsultancy/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+      <a href="chatroom.html" target="_blank"><i class="fas fa-message fa-2x" style="color: #226fff;"></i></a>
+    </div>
+  </div>
+
+  <div class="main-nav flex flex-wrap gap-6 items-center justify-center">
+    <a href="web.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="preprations.html">Test Preparation</a>
+    <a href="services.html">Scholarship</a>
+    <a href="internship.html">Internship</a>
+    <a href="contact.html">Contact</a>
+  
+    <div class="dropdown relative">
+      <a class="text-black font-bold px-4 py-2 inline-block">Resources ▾</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown-menu absolute hidden bg-white border rounded shadow-lg mt-2 z-50 min-w-max">
+        <a href="blogs.html" class="block px-4 py-2 text-black hover:bg-gray-100">Blogs</a>
+        <a href="newsroom.html" class="block px-4 py-2 text-black hover:bg-gray-100">Newsroom</a>
+      </div>
+    </div>
+  
+    <a href="login2.html">Login</a>
+  </div>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      color: #1d4ed8;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      margin: 8px 0;
+    }
+
+    a.email-link {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    a.email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #1d4ed8;
+      text-decoration: underline;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: #0f3cc9;
+    }
+  </style>
+</head>
+<body>
+  <main class="container mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">📍 Find Us Here</h2>
+    <div class="container">
+      <section class="grid">
+        <div class="card">
+
+   
+     
+      
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.3832716304837!2d85.32008047551987!3d27.705281576183783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a81f61c2c5%3A0x1eedf27f79e602c!2sMagnificent%20Education%20%26%20I.T.%20Services%20(Magnificent%20Study%20Abroad%20Kathmandu)!5e1!3m2!1sen!2snp!4v1750840332854!5m2!1sen!2snp"  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ 
+          </iframe>
+        </div>
+       
+            <div class="card">
+    
+      
+        
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5258900290482!2d85.31794337551865!3d27.670421976203748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f715a4693b%3A0x880a8efea585bdae!2sMagnificent%20Study%20Abroad%20Lalitpur!5e1!3m2!1sen!2snp!4v1750840938323!5m2!1sen!2snp"width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+          </iframe>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </main>
+
+  <div class="container">
+    <section class="grid">
+      <div class="card">
+        <h2>Kathmandu Head Office</h2>
+        <p>Putalisadak, Kathmandu, Nepal</p>
+        <p>📞 (977)-(01)-5333698, 9849949909</p>
+        <p>📧 <a href="mailto:info@magnificent.com.np" class="email-link">info@magnificent.com.np</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Lalitpur Office</h2>
+        <p>Kumaripati, Lalitpur</p>
+        <p>3rd Floor, Above Nepal Investment Mega Bank</p>
+        <p>Opposite Machindra Petrol Pump</p>
+        <p>📞 01-5407166, 9844277261</p>
+        <p>📧 <a href="mailto:lalitpur@magnificent.com.np" class="email-link">lalitpur@magnificent.com.np</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Magnificent Education and I.T Services. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> |
+      <a href="/terms">Terms of Service</a>
+    </p>
+  </footer>
+
+</body>
+</html>

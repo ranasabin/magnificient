@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Application</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color: #fff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar img {
+      height: 80px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+    }
+
+    .subtext {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .navbar .links a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .main-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      color: skyblue;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #fff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+      color: #555;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      color: #1d4ed8;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      margin: 8px 0;
+    }
+
+    a.email-link {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    a.email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #1d4ed8;
+      text-decoration: underline;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: #0f3cc9;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+
+
+  <div class="navbar">
+    <a href="web.html"><img src="/Users/sabinrana/Downloads/download.jpeg" alt="Logo"></a>
+    <div>
+      <div class="brand">MAGNIFICENT STUDY ABROAD</div>
+      <div style="text-align: center ;"class="subtext">Magnificent Education and I.T Services</div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i></a>
+      <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i></a>
+      <a href="https://x.com/meit2008?lang=fa" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
+      <a href="https://www.tiktok.com/@meit2008" target="_blank"><i class="fab fa-tiktok fa-2x" style="color: #000000;"></i></a>
+      <a href="https://www.linkedin.com/company/magnificentconsultancy/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+      <a href="https://swachchanjali.blogspot.com/2025/02/phase-2-of-swachchanjali-afforestation.html" target="_blank"><i class="fas fa-blog fa-2x" style="color: #FF5722;"></i></a>
+      <a href="chatroom.html" target="_blank"><i class="fas fa-message fa-2x" style="color: #226fff;"></i></a>
+    </div>
+  </div>
+
+  <div class="main-nav">
+    <a href="web.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="preprations.html">Test Preparation</a>
+    <a href="services.html">Scholarship</a>
+    <a href="internship.html">Internship</a>
+    <a href="contact.html">Contact</a>
+    <a href="login2.html">Login</a>
+  </div>
+</head>
+<body class="bg-gray-50 py-10 px-4">
+
+  <div class="max-w-3xl mx-auto bg-white shadow-xl p-8 rounded-lg">
+    <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">Internship Application Form</h2>
+
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label class="block font-semibold mb-1" for="name">Full Name</label>
+        <input id="name" name="name" type="text" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="email">Email Address</label>
+        <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="education">Educational Background</label>
+        <input id="education" name="education" type="text" placeholder="e.g., Bachelor's in IT,BCA,BBA" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="interest">Why do you want to intern with us?</label>
+        <textarea id="interest" name="interest" rows="4" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"></textarea>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="interest">What do you want to intern for?</label>
+        <select id="interest" name="interest" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400">
+          <option value="" disabled selected>Select an internship interest</option>
+          <option value="IT">Internship for IT</option>
+          <option value="Study Abroad">Internship for Study Abroad</option>
+          
+        </select>
+      </div>
+      
+
+      <div>
+        <label class="block font-semibold mb-1" for="skills">Skills / Software Knowledge</label>
+        <input id="skills" name="skills" type="text" placeholder="e.g., HTML, JavaScript, Canva, Photoshop" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="availability">Availability (Start Date)</label>
+        <input id="availability" name="availability" type="date" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring focus:border-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1" for="resume">Resume (PDF/Doc)</label>
+        <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,.png" class="w-full border border-gray-300 rounded px-4 py-2"/>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Submit Application</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

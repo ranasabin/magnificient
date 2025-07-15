@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar img {
+      height: 50px;
+    }
+
+    .navbar .brand {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e60000;
+    }
+
+    .navbar .subtext {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .navbar .links a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ffffff;
+      padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .main-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      color: skyblue;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #ffffff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+      color: #555;
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      color: #1d4ed8;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      margin: 8px 0;
+    }
+
+    a.email-link {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    a.email-link:hover {
+      text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="/Users/sabinrana/Downloads/download.jpeg" alt="Logo">
+    <div>
+      <div class="brand">MAGNIFICENT STUDY ABROAD</div>
+      <div class="subtext">Magnificent Education and I.T Services</div>
+    </div>
+    <div class="links">
+        <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i>
+        </a>
+        <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i>
+        </a>
+        <a href="https://x.com/Magnificent4521" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i>
+        </a>
+        <a href="https://www.tiktok.com/@magnificentstudyabroad" target="_blank" aria-label="TikTok">
+          <i class="fab fa-tiktok fa-2x" style="color: #000000;"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/magnificentstudyabroad" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i>
+        </a>
+        <a href="http://magnificent.com.np/blogs/" target="_blank" aria-label="Blog">
+          <i class="fas fa-blog fa-2x" style="color: #FF5722;"></i>
+        </a>
+      </div>
+      
+      
+  </div>
+
+  <div class="main-nav">
+    <a href="web.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="preprations.html">Test Preparation</a>
+    <a href="services.html">Scholarship</a>
+    <a href="contact.html">Contact</a>
+  </div>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f8;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: popupFade 0.3s ease;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #0077ff;
+    }
+
+    .popup p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup .close-btn {
+      padding: 10px 20px;
+      background: #ff3b3b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+      background: #d62828;
+    }
+
+    @keyframes popupFade {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN / SIGNUP POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2 id="form-title">🔐 Welcome Back</h2>
+      <p class="subtitle" id="form-subtitle">Login to your account</p>
+  
+      <input type="email" id="email" placeholder="✉️ Email" />
+      <input type="password" id="password" placeholder="🔑 Password" />
+      
+      <!-- Confirm password only visible for signup -->
+      <input type="password" id="confirm-password" placeholder="🔑 Confirm Password" style="display:none;" />
+  
+      <button id="action-btn" onclick="login()">Sign In</button>
+  
+      <p id="login-status"></p>
+  
+      <p style="margin-top:15px;">
+        <span id="toggle-text">Don't have an account? </span>
+        <a href="#" id="toggle-link">Sign Up</a>
+      </p>
+    </div>
+  </div>
+  
+  <script>
+    const popup = document.getElementById('popup');
+    const formTitle = document.getElementById('form-title');
+    const formSubtitle = document.getElementById('form-subtitle');
+    const toggleLink = document.getElementById('toggle-link');
+    const toggleText = document.getElementById('toggle-text');
+    const actionBtn = document.getElementById('action-btn');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const status = document.getElementById('login-status');
+  
+    // Current mode: true = login, false = signup
+    let isLoginMode = true;
+  
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      isLoginMode = !isLoginMode;
+  
+      if (isLoginMode) {
+        formTitle.textContent = "🔐 Welcome Back";
+        formSubtitle.textContent = "Login to your account";
+        actionBtn.textContent = "Sign In";
+        actionBtn.onclick = login;
+        confirmPasswordInput.style.display = "none";
+        toggleText.textContent = "Don't have an account? ";
+        toggleLink.textContent = "Sign Up";
+        status.textContent = "";
+      } else {
+        formTitle.textContent = "📝 Create Account";
+        formSubtitle.textContent = "Sign up for a new account";
+        actionBtn.textContent = "Register";
+        actionBtn.onclick = signUp;
+        confirmPasswordInput.style.display = "block";
+        toggleText.textContent = "Already have an account? ";
+        toggleLink.textContent = "Login";
+        status.textContent = "";
+      }
+    });
+  
+    function login() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+  
+      if (!email || !password) {
+        status.style.color = 'red';
+        status.textContent = 'Please enter email and password.';
+        return;
+      }
+  
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+          status.style.color = 'green';
+          status.textContent = '✅ Login successful!';
+          setTimeout(closePopup, 1000);
+        })
+        .catch((error) => {
+          status.style.color = 'red';
+          status.textContent = `❌ ${error.message}`;
+        });
+    }
+  
+    function signUp() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const confirmPassword = document.getElementById('confirm-password').value.trim();
+  
+      if (!email || !password || !confirmPassword) {
+        status.style.color = 'red';
+        status.textContent = 'Please fill in all fields.';
+        return;
+      }
+  
+      if (password !== confirmPassword) {
+        status.style.color = 'red';
+        status.textContent = 'Passwords do not match.';
+        return;
+      }
+  
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          status.style.color = 'green';
+          status.textContent = '🎉 Registration successful! You can now login.';
+          // Switch back to login after registration success
+          setTimeout(() => {
+            toggleLink.click();
+            status.textContent = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('confirm-password').value = '';
+          }, 1500);
+        })
+        .catch((error) => {
+          status.style.color = 'red';
+          status.textContent = `❌ ${error.message}`;
+        });
+    }
+  
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+  
+    // Show popup on page load
+    window.onload = () => {
+      popup.style.display = 'block';
+    };
+  </script>
+  

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magnificent Chat Room</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d0eaff, #fceaff);
+      padding: 40px 20px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+    #chat-box {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      overflow-y: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .message {
+      max-width: 80%;
+      padding: 10px 14px;
+      margin: 6px 0;
+      border-radius: 16px;
+      background-color: #e0f7fa;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .message.self {
+      background-color: #d1ffd6;
+      margin-left: auto;
+      text-align: right;
+    }
+    .message strong {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 3px;
+      font-size: 13px;
+      color: #555;
+    }
+    #chat-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    #chat-form input {
+      flex: 1;
+      min-width: 120px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    #chat-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+    #chat-form button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>💬 Magnificent Chat Room</h2>
+
+  <div id="chat-box"></div>
+
+  <form id="chat-form">
+    <input type="text" id="username" placeholder="👤 Your name" required />
+    <input type="text" id="message" placeholder="✉️ Your message" required />
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCYAe371HbfWO-hSZZLkqS7vePp_loV6o",
+      authDomain: "magnificient-21ada.firebaseapp.com",
+      projectId: "magnificient-21ada",
+      storageBucket: "magnificient-21ada.appspot.com",
+      messagingSenderId: "117676711924",
+      appId: "1:117676711924:web:3d3b641e2b0b5bc54ae3a1",
+      measurementId: "G-5B8ZNJJKQC",
+      databaseURL: "https://magnificient-21ada-default-rtdb.firebaseio.com"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const chatBox = document.getElementById('chat-box');
+    const chatForm = document.getElementById('chat-form');
+    const username = document.getElementById('username');
+    const message = document.getElementById('message');
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = message.value.trim();
+      const user = username.value.trim();
+      if (msg && user) {
+        db.ref('messages').push({
+          name: user,
+          text: msg,
+          time: Date.now()
+        });
+        message.value = '';
+      }
+    });
+
+    db.ref('messages').on('child_added', (snapshot) => {
+      const msg = snapshot.val();
+      const div = document.createElement('div');
+      div.className = 'message' + (msg.name === username.value ? ' self' : '');
+      div.innerHTML = `<strong>${msg.name}</strong>${msg.text}`;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+  </script>
+</body>
+</html>

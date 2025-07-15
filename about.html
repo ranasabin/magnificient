@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAGNIFICENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+   <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color:rgb(255, 255, 255);
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar img {
+      height: 100px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+    }
+
+    .subtext {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .navbar .links a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      background:rgb(255, 255, 255);
+      padding: 10px 0;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .main-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      color: skyblue;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #fff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup {
+      background-color: rgba(255, 255, 255, 0);
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: popupFade 0.3s ease;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #0077ff;
+    }
+
+    .popup p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup .close-btn {
+      padding: 10px 20px;
+      background: #ff3b3b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+      background: #d62828;
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+    @keyframes popupFade {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div class="navbar">
+    <a href="web.html"><img src="/Users/sabinrana/Downloads/download.jpeg" alt="Logo"></a>
+    <div>
+      <div class="brand">MAGNIFICENT STUDY ABROAD</div>
+     <div style="text-align: center ;"class="subtext">Magnificent Education and I.T Services</div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i></a>
+      <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i></a>
+      <a href="https://x.com/meit2008?lang=fa" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
+      <a href="https://www.tiktok.com/@meit2008" target="_blank"><i class="fab fa-tiktok fa-2x" style="color: #000000;"></i></a>
+      <a href="https://www.linkedin.com/company/magnificentconsultancy/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+      <a href="chatroom.html" target="_blank"><i class="fas fa-message fa-2x" style="color: #226fff;"></i></a>
+    </div>
+  </div>
+
+  <div class="main-nav flex flex-wrap gap-6 items-center justify-center">
+    <a href="web.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="preprations.html">Test Preparation</a>
+    <a href="services.html">Scholarship</a>
+    <a href="internship.html">Internship</a>
+    <a href="contact.html">Contact</a>
+  
+    <div class="dropdown relative">
+      <a class="text-black font-bold px-4 py-2 inline-block">Resources ▾</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown-menu absolute hidden bg-white border rounded shadow-lg mt-2 z-50 min-w-max">
+        <a href="blogs.html" class="block px-4 py-2 text-black hover:bg-gray-100">Blogs</a>
+        <a href="newsroom.html" class="block px-4 py-2 text-black hover:bg-gray-100">Newsroom</a>
+      </div>
+    </div>
+  
+    <a href="login2.html">Login</a>
+  </div>
+  
+<body class="bg-white text-gray-900 font-sans leading-relaxed">
+  <header class="bg-gray-100 text-blue-700 py-6 text-center">
+    <h1 class="text-3xl font-bold">ABOUT US</h1>
+  </header>
+
+  <main class="container mx-auto px-6 py-10">
+    <section class="text-center mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Welcome to Magnificent</h2>
+      <p class="text-justify">
+        We are the premier source for supporting students through the college selection, abroad study, courses, and application process. With over 11 years of experience, we specialize in counseling destinations like Australia, the USA, the UK, Canada, and India. Our high visa success rate and the success of our students speak volumes.
+        <br><br>
+        Magnificent is run by highly trained experts and is dedicated to providing top-quality guidance to students for choosing the right college and career path. We are committed to “Expanding the Boundaries of Educational Excellence” by ensuring a perfect match between students and institutions.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h3 class="text-2xl font-semibold mb-4 text-center">Mission and Vision</h3>
+      <p class="mb-4 text-justify">
+        Magnificent is solely dedicated to Abroad Studies Counseling and Test Preparation Classes. Our motivation is the joy of students and parents after successful placement and settlement.
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-justify">
+        <li>To be recognized as one of the most trusted international educational consulting companies.</li>
+        <li>To uplift the living standards of students by providing access to higher education abroad.</li>
+        <li>To instill a sense of nationalism in students, encouraging them to return and contribute to Nepal.</li>
+        <li>To broaden students' knowledge and enhance their productivity and capacity.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h4 class="text-2xl font-semibold mb-4 text-center">Our Experience</h4>
+      <ul class="list-disc pl-6">
+        <li>Years of experience: Since 2008</li>
+      </ul>
+    </section>
+
+  
+
+    <div class="container">
+      <section class="grid">
+        <div class="card">
+          <h2>Kathmandu Head Office</h2>
+          <p>Putalisadak, Kathmandu, Nepal</p>
+          <p>📞 (977)-(01)-5333698, 9849949909</p>
+          <p>📧 <a href="mailto:info@magnificent.com.np" class="email-link">info@magnificent.com.np</a></p>
+        </div>
+  
+        <div class="card">
+          <h2>Lalitpur Office</h2>
+          <p>Kumaripati, Lalitpur</p>
+          <p>3rd Floor, Above Nepal Investment Mega Bank</p>
+          <p>Opposite Machindra Petrol Pump</p>
+          <p>📞 01-5407166, 9844277261</p>
+          <p>📧 <a href="mailto:info@magnificent.com.np" class="email-link">lalitpur@magnificent.com.np</a></p>
+        </div>
+      </section>
+    </div>
+  
+    
+      
+    
+   
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-700">
+    <p>&copy; 2025 Magnificent Education and I.T Services. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy" class="text-blue-700 underline hover:text-blue-900">Privacy Policy</a> |
+      <a href="/terms" class="text-blue-700 underline hover:text-blue-900">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.site-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.trending-blogs .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-content time {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.blog-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.blog-content a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.other-blogs ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.other-blogs li {
+  margin-bottom: 12px;
+}
+
+.other-blogs time {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #444;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

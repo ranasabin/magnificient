@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animated Background with Search Bar</title>
+  <style>
+    /* Container for the image and search bar */
+    .image-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Slideshow backgrounds */
+    .slideshow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    /* Each slide as full cover */
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: fadeAnimation 25s infinite;
+    }
+
+    /* Delay for each slide */
+    .slide:nth-child(1) {
+      background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqnM4QRYw9ZnOF6iUgtTCk26Ru5zybZ9aEaZFQywWJge3f5I8RmwNAbTguzAprdMJ16IovCwm7yGiBr0vxyg6pcl11EFwk1unlVXEUUimz1JUcKfVyU__5Yx6lob6igERCMfTMQ=w1080-h624-n-k-no');
+      animation-delay: 0s;
+    }
+    .slide:nth-child(2) {
+      background-image: url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcThjC2S-rCdMMcy3l1wgnfWHXkeptY-962AO0rhuKZjuXWd0RI2b1F318Flifjbr9B1FjxFnYxhjUbCHBZsShj1j9kGt7z82HFJp_ixlQ');
+      animation-delay: 5s;
+    }
+    .slide:nth-child(3) {
+      background-image: url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSEHM_40AL3toNkPAHlBLpJ76W9hDEP1dCQCy5Ywj7uZrzcqPicINWnIgOzlb2EiLX8twOZuirl5l-DqOOG8v3seICpbeSTqkddaGLRUw');
+      animation-delay: 10s;
+    }
+    .slide:nth-child(4) {
+      background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRP4rYBIuoK-1MDh-rA2qb0lSQNJcyytIysX9iy02bfxxwk5oLG2oi4CB2g_bWZIOzZvpFN7EXBkCao8vrAtUuwxqCZhyXmguVghnhkSw');
+      animation-delay: 15s;
+    }
+    .slide:nth-child(5) {
+      background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrfk90p-G21CZMW6pKa6BBBoKu6XMpq8N21tsRuoa1lVwVDFIsw6_4wF3rGvPoLfCvw0n7KOGGvr-T2OVjHVWM8Um6X_MprMIse3_gLc2xehTzoWZXUVuHo56zQDNECOT7eZO6C=w1080-h624-n-k-no');
+      animation-delay: 20s;
+    }
+    .slide:nth-child(6) {
+      background-image: url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSQI3F3X5wa2xFVFYnChi3N1Putap3gYx0yQgDPfCir2V3lcYNig6UfxJhAC3inNb-Y21Mx1DLL81CbGdlKZP_x9fjPOapd5Vzu6adVXqU');
+      animation-delay: 25s;
+    }
+    .slide:nth-child(7) {
+      background-image: url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRCZs9tDtSpJP2hifq1WJJ4ABSV9BHB0JP_NjfbEGGkJKzQwTp-arDdFljbCZcEnxVBKt2qlXFzp3SKCiUKoVcHAnnvfSICEMkUsb8W1g');
+      animation-delay: 30s;
+    }
+    .slide:nth-child(8) {
+      background-image: url('https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQJ635KKY-sOBgsa9SDH2fe7DbJwb0gXWq0VjFGEerFoGOHJu4Akkro837qvJ8AC3th');
+      animation-delay: 35s;
+    }
+
+    /* Animation for fade in/out */
+    @keyframes fadeAnimation {
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      30% {opacity: 1;}
+      40% {opacity: 0;}
+      100% {opacity: 0;}
+    }
+
+    /* Brightness filter on slideshow container */
+    .slideshow:hover .slide {
+      filter: brightness(1);
+      transition: filter 0.3s ease;
+    }
+    .slide {
+      filter: brightness(0.75);
+      transition: filter 0.3s ease;
+    }
+
+    /* Search bar container */
+    .search-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Show search container on hover of slideshow */
+    .image-container:hover .search-container {
+      opacity: 1;
+    }
+
+    /* Search input styling */
+    .search-bar {
+      flex-grow: 1;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .search-bar:focus {
+      border-color: #4caf50;
+      box-shadow: 0 0 8px #4caf50;
+      background-color: #f9fff9;
+    }
+
+    /* Search button styling */
+    .search-btn {
+      background-color: #4caf50;
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    .search-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Dropdown menu styling */
+    .dropdown {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    /* Show dropdown when hovering over search container */
+    .search-container:hover .dropdown {
+      display: flex;
+    }
+
+    /* Dropdown link styling */
+    .dropdown a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s ease;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .search-container {
+        width: 90%;
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .search-btn {
+        width: 100%;
+        padding: 12px 0;
+      }
+
+      .dropdown {
+        top: auto;
+        bottom: -210px;
+        max-height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <div class="slideshow">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+
+    <div class="search-container">
+      <form action="search_results.html" method="get" style="width: 100%; display: flex; position: relative; flex-direction: column;">
+        <input
+          type="text"
+          name="query"
+          class="search-bar"
+          placeholder="Search Destination"
+          required
+          autocomplete="off"
+        />
+        
+        <div class="dropdown">
+          <a href="us.html">U.S.A</a>
+          <a href="aus.html">Australia</a>
+          <a href="uk.html">U.K</a>
+          <a href="ireland.html">Ireland</a>
+          <a href="india.html">India</a>
+          <a href="new zealand.html">New Zealand</a>
+          <a href="canadaa.html">Canada</a>
+          <a href="philippines.html">Dubai</a>
+          <a href="german.html">German</a>
+          <a href="finland.html">Finland</a>
+          <a href="philippines.html">Philippines</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

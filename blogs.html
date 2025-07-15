@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAGNIFICENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color:rgb(255, 255, 255);
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .navbar img {
+      height: 100px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+    }
+
+    .subtext {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .navbar .links a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      background:rgb(255, 255, 255);
+      padding: 10px 0;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .main-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      color: skyblue;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #fff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup {
+      background-color: rgba(255, 255, 255, 0);
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: popupFade 0.3s ease;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #0077ff;
+    }
+
+    .popup p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup .close-btn {
+      padding: 10px 20px;
+      background: #ff3b3b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+      background: #d62828;
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+    @keyframes popupFade {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+ 
+  <div class="navbar">
+    <a href="web.html"><img src="/Users/sabinrana/Downloads/download.jpeg" alt="Logo"></a>
+    <div>
+      <div class="brand">MAGNIFICENT STUDY ABROAD</div>
+     <div style="text-align: center ;"class="subtext">Magnificent Education and I.T Services</div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i></a>
+      <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i></a>
+      <a href="https://x.com/meit2008?lang=fa" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
+      <a href="https://www.tiktok.com/@meit2008" target="_blank"><i class="fab fa-tiktok fa-2x" style="color: #000000;"></i></a>
+      <a href="https://www.linkedin.com/company/magnificentconsultancy/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+      <a href="chatroom.html" target="_blank"><i class="fas fa-message fa-2x" style="color: #226fff;"></i></a>
+    </div>
+  </div>
+
+  <div class="main-nav flex flex-wrap gap-6 items-center justify-center">
+    <a href="web.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="preprations.html">Test Preparation</a>
+    <a href="services.html">Scholarship</a>
+    <a href="internship.html">Internship</a>
+    <a href="contact.html">Contact</a>
+  
+    <div class="dropdown relative">
+      <a class="text-black font-bold px-4 py-2 inline-block">Resources ▾</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown-menu absolute hidden bg-white border rounded shadow-lg mt-2 z-50 min-w-max">
+        <a href="blogs.html" class="block px-4 py-2 text-black hover:bg-gray-100">Blogs</a>
+        <a href="newsroom.html" class="block px-4 py-2 text-black hover:bg-gray-100">Newsroom</a>
+      </div>
+    </div>
+  
+    <a href="login2.html">Login</a>
+  </div>
+  
+
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-semibold mb-6">Latest Blog Posts</h2>
+
+   
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+   
+        <div class="bg-white rounded-lg shadow p-6">
+            <img src="/Users/sabinrana/Downloads/Fake-2.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+            <h3 class="text-xl font-bold mb-2">The Deadly Mistake: Using Fake Documents for Study Visa Applications</h3>
+            <p class="text-gray-600 mb-4">In recent years, the dream of studying abroad has become a goal for thousands of students worldwide. Countries like the</p>
+            <a href="1.html" class="text-blue-500 hover:underline">Read more →</a>
+          </div>
+          
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/212.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">🎓 Complete Guide to DAAD Scholarships</h3>
+        <p class="text-gray-600 mb-4">The DAAD (Deutscher Akademischer Austauschdienst) or German Academic Exchange Service is the largest funding organization in the world supporting international</p>
+        <a href="2.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+
+  
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/321.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">PTE vs. IELTS: Which English Test Should You Choose as a Student?</h3>
+        <p class="text-gray-600 mb-4">If you’re planning to study abroad in countries like the UK, Australia, Canada, or the USA, proving your English proficiency</p>
+        <a href="3.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/000.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">
+            🇩🇪 Study in Germany from Nepal: Complete Guide for Bachelor’s & Master’s (Public & Private Universities)</h3>
+        <p class="text-gray-600 mb-4">Germany is one of the most attractive destinations for international students due to its world-class education, low or no tuition</p>
+        <a href="4.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/420.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">🎓 Why You Should Choose a Master’s Degree in the UK with Dependents – And Avoid a Bachelor’s</h3>
+        <p class="text-gray-600 mb-4">Studying in the UK is a dream for many students around the world. With world-class universities, a multicultural environment, and</p>
+        <a href="5.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/333.jpg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">𝗣𝗹𝗮𝗻𝗻𝗶𝗻𝗴 𝘁𝗼 𝗦𝘁𝘂𝗱𝘆 𝗶𝗻 Ireland? 𝗛𝗲𝗿𝗲’𝘀 𝗬𝗼𝘂𝗿 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗗-𝗦𝘁𝘂𝗱𝘆 𝗩𝗶𝘀𝗮 𝗖𝗵𝗲𝗰𝗸𝗹𝗶𝘀𝘁 𝗳𝗼𝗿 𝗡𝗲𝗽𝗮𝗹𝗲𝘀𝗲 𝗦𝘁𝘂𝗱𝗲𝗻𝘁𝘀!</h3>
+        <p class="text-gray-600 mb-4">If you’re a Nepalese student planning to study in Ireland, securing your D-Study Visa is a crucial step. Below is a verified and</p>
+        <a href="6.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/11.jpg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Scholarships in Ireland: Unlocking Opportunities for International Students</h3>
+        <p class="text-gray-600 mb-4">Ireland, known for its rich cultural heritage, stunning landscapes, and world-class education system, has become an increasingly popular destination for</p>
+        <a href="7.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/101.jpeg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Studying in Denmark with Scholarships: Your Guide to a World-Class Education</h3>
+        <p class="text-gray-600 mb-4">Denmark, renowned for its high-quality education system, vibrant culture, and innovative research environment, is an increasingly popular destination for international</p>
+        <a href="8.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/102.jpg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2"> Comprehensive Guide to New Zealand Student Visa Requirements and Sponsorship Details</h3>
+        <p class="text-gray-600 mb-4">If you are planning to study in New Zealand, understanding the student visa requirements and the necessary documents is crucial</p>
+        <a href="9.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/103.webp" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Understanding the F-2 Visa: A Guide for Dependents of F-1 Visa Holders</h3>
+        <p class="text-gray-600 mb-4">The F-2 visa is a non-immigrant visa designed for the dependents (spouses and unmarried children under 21) of F-1 student</p>
+        <a href="10.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/104.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Exploring Post-Study Work Opportunities in New Zealand</h3>
+        <p class="text-gray-600 mb-4">New Zealand has emerged as an attractive destination for international students seeking to gain valuable work experience after completing their</p>
+        <a href="11.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/105.jpeg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Applying to study in the USA as an international student involves several detailed steps and considerations. Below is an extensive guide covering the various aspects of this process</h3>
+        <p class="text-gray-600 mb-4">1. Research and University Selection 2. Admission Requirements 3. Standardized Testing 4. Financial Planning 5. Application Process 6. Visa Process</p>
+        <a href="12.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/106.jpeg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Working in Germany as an International Student: Part-Time Jobs and Rates</h3>
+        <p class="text-gray-600 mb-4">Are you considering studying in Germany as an international student and wondering about the opportunities for part-time work? If so,</p>
+        <a href="13.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/107.jpeg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Scholarship Opportunities for International Students in the USA</h3>
+        <p class="text-gray-600 mb-4">In the USA, there are several types of scholarships available for international students, each with its own eligibility criteria and</p>
+        <a href="14.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/108.png" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Navigating the H-1B Visa Process: A Comprehensive Guide for Graduates from US Universities</h3>
+        <p class="text-gray-600 mb-4">Introduction: Securing an H-1B visa after graduating from a university in the United States can be a significant milestone for</p>
+        <a href="15.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/106.jpeg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Working in Germany as an International Student: Part-Time Jobs and Rates</h3>
+        <p class="text-gray-600 mb-4">Are you considering studying in Germany as an international student and wondering about the opportunities for part-time work? If so,</p>
+        <a href="13.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <img src="/Users/sabinrana/Downloads/106.jpeg" alt="Study Visa Warning" class="w-full h-auto rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Working in Germany as an International Student: Part-Time Jobs and Rates</h3>
+        <p class="text-gray-600 mb-4">Are you considering studying in Germany as an international student and wondering about the opportunities for part-time work? If so,</p>
+        <a href="13.html" class="text-blue-500 hover:underline">Read more →</a>
+      </div>
+      
