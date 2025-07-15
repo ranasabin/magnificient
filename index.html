@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAGNIFICENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color:rgb(255, 255, 255);
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .navbar img {
+      height: 100px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+    }
+
+    .subtext {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .navbar .links a {
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      background:rgb(255, 255, 255);
+      padding: 10px 0;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .main-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:hover {
+      color: skyblue;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #fff;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup {
+      background-color: rgba(255, 255, 255, 0);
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: popupFade 0.3s ease;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #0077ff;
+    }
+
+    .popup p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .popup .close-btn {
+      padding: 10px 20px;
+      background: #ff3b3b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+      background: #d62828;
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+    @keyframes popupFade {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <img src="/Users/sabinrana/Downloads/iltes.jpg" height="400" width="400">
+      <button class="close-btn" onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function hidePopup() {
+      document.getElementById('popupOverlay').style.display = 'none';
+    }
+
+    // Optional: delay popup by 1 second
+    window.onload = function () {
+      document.getElementById('popupOverlay').style.display = 'flex';
+    };
+    </script>
+
+  <div class="navbar">
+    <a href="web.html"><img src="/Users/sabinrana/Downloads/download.jpeg" alt="Logo"></a>
+    <div>
+      <div class="brand">MAGNIFICENT STUDY ABROAD</div>
+     <div style="text-align: center ;"class="subtext">Magnificent Education and I.T Services</div>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i></a>
+      <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i></a>
+      <a href="https://x.com/meit2008?lang=fa" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
+      <a href="https://www.tiktok.com/@meit2008" target="_blank"><i class="fab fa-tiktok fa-2x" style="color: #000000;"></i></a>
+      <a href="https://www.linkedin.com/company/magnificentconsultancy/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+      <a href="chatroom.html" target="_blank"><i class="fas fa-message fa-2x" style="color: #226fff;"></i></a>
+    </div>
+  </div>
+
+  <div class="main-nav flex flex-wrap gap-6 items-center justify-center">
+    <a href="web.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="preprations.html">Test Preparation</a>
+    <a href="services.html">Scholarship</a>
+    <a href="internship.html">Internship</a>
+    <a href="contact.html">Contact</a>
+  
+    <div class="dropdown relative">
+      <a class="text-black font-bold px-4 py-2 inline-block">Resources ▾</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown-menu absolute hidden bg-white border rounded shadow-lg mt-2 z-50 min-w-max">
+        <a href="blogs.html" class="block px-4 py-2 text-black hover:bg-gray-100">Blogs</a>
+        <a href="newsroom.html" class="block px-4 py-2 text-black hover:bg-gray-100">Newsroom</a>
+      </div>
+    </div>
+  
+    <a href="login2.html">Login</a>
+  </div>
+  
+  <div class="content">
+    <iframe src="search.html" width="1400" height="700" style="border: none;"></iframe>
+  </div>
+
+  <style>
+    .service-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans">
+
+  <header class=" text-black py-6 shadow-md text-center">
+    
+    <h1 class="text-3xl font-bold uppercase animate-pulse">Our Services & What We Provide</h1>
+  </header>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="service-container">
+      <!-- Cards will be added by JavaScript -->
+    </div>
+  </main>
+
+  <script>
+    const services = [
+      {
+        title: "Study Abroad Counseling",
+        icon: "fa-user-graduate",
+        text: "We help students choose the right country, university, and course that fits their career goals and budget."
+      },
+      {
+        title: "Test Preparation",
+        icon: "fa-book-reader",
+        text: "Coaching for IELTS, TOEFL, PTE, SAT, GRE, GMAT with mock tests and expert guidance."
+      },
+      {
+        title: "Admission Assistance",
+        icon: "fa-file-signature",
+        text: "Support in university applications, SOPs, essays, CVs, and meeting deadlines."
+      },
+      {
+        title: "Scholarship Guidance",
+        icon: "fa-graduation-cap",
+        text: "Help in finding and applying for merit-based and need-based scholarships."
+      },
+      {
+        title: "Visa Processing",
+        icon: "fa-passport",
+        text: "Visa document preparation, interview tips, and embassy requirements."
+      },
+      {
+        title: "Pre-Departure & Post-Arrival",
+        icon: "fa-plane-departure",
+        text: "Orientation, airport pickup, and accommodation help."
+      },
+      {
+        title: "IT & Career Training",
+        icon: "fa-laptop-code",
+        text: "Courses on digital skills like web design, MS Office, and graphic design."
+      },
+      {
+        title: "Personality Development",
+        icon: "fa-chalkboard-teacher",
+        text: "Workshops on soft skills, interviews, and public speaking."
+      },
+      {
+        title: "Community & Social Programs",
+        icon: "fa-hands-helping",
+        text: "Volunteer programs, leadership, and cultural exchanges."
+      }
+    ];
+
+    const container = document.getElementById("service-container");
+
+    services.forEach(service => {
+      const card = document.createElement("div");
+      card.className = "service-card bg-white p-6 rounded-lg shadow hover:shadow-xl transform transition-transform duration-300";
+      card.innerHTML = `
+        <div class="text-blue-600 text-3xl mb-4">
+          <i class="fas ${service.icon}"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">${service.title}</h3>
+        <p class="text-sm text-gray-700">${service.text}</p>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+<style>
+  .hover-scale:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+</style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+<header class="bg-white shadow py-6 text-center">
+  <h1 class="text-3xl font-bold text-black-700">Our University Partners</h1>
+</header>
+
+<div class="relative overflow-hidden">
+  <div id="carousel" class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-4 hide-scrollbar">
+    
+    
+    <div class="bg-white min-w-[280px] p-6 shadow-xl rounded-lg text-center snap-start transition-transform duration-300 hover:scale-105">
+      <img src="/Users/sabinrana/Downloads/images-15.png" class="h-28 mx-auto mb-2" alt="dhuram">
+    </div>
+    <div class="bg-white min-w-[280px] p-6 shadow-xl rounded-lg text-center snap-start transition-transform duration-300 hover:scale-105">
+      <img src="/Users/sabinrana/Downloads/images-6.png" class="h-28 mx-auto mb-2" alt="kenston">
+    </div>
+    <div class="bg-white min-w-[280px] p-6 shadow-xl rounded-lg text-center snap-start transition-transform duration-300 hover:scale-105">
+      <img src="/Users/sabinrana/Downloads/JCU.png" class="h-28 mx-auto mb-2" alt="JCU">
+    </div>
+    <div class="bg-white min-w-[280px] p-6 shadow-xl rounded-lg text-center snap-start transition-transform duration-300 hover:scale-105">
+      <img src="/Users/sabinrana/Downloads/images-11.png" class="h-28 mx-auto mb-2" alt="ul">
+    </div>
+    
+    
+  </div>
+</div>
+<script>
+  const carousel = document.getElementById("carousel");
+
+  function scrollCarousel(direction) {
+    const scrollAmount = 300;
+    carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
+
+  // Auto-slide every 4 seconds
+  setInterval(() => {
+    carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+  }, 4000);
+</script>
+<style>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+</section>
+
+<script>
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById("carousel");
+    const scrollAmount = 280; 
+    carousel.scrollBy({
+      left: scrollAmount * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<div class="social-icons">
+  <a href="https://www.instagram.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i></a>
+  <a href="https://www.facebook.com/magnificentstudyabroad/" target="_blank"><i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i></a>
+  <a href="https://x.com/meit2008?lang=fa" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i></a>
+  <a href="https://www.tiktok.com/@magnificentstudyabroad" target="_blank"><i class="fab fa-tiktok fa-2x" style="color: #000000;"></i></a>
+  <a href="https://www.linkedin.com/company/magnificentstudyabroad" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i></a>
+</div>
+
+
+
+
+
+</body>
+  <footer>
+    <p>&copy; 2025 Magnificent Education and I.T Services. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> |
+      <a href="/terms">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script>
+    window.onload = function() {
+      document.getElementById('popup').style.display = 'block';
+    };
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+  <!-- Start of Tawk.to Script -->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function() {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/YOUR_UNIQUE_ID/1abcdefg';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!-- End of Tawk.to Script -->
+
+</body>
+</html>
